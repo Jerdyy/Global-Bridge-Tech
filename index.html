@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Global Bridge Tech — CONNECTING WORLDS THROUGH LOCALIZATION</title>
+  <meta name="description" content="Global Bridge Tech is a Thailand‑based localization services provider specializing in TMS setup & integration (memoQ, Phrase), file pre‑processing, DTP, e‑Learning localization (Storyline, Rise 360), linguistic testing, and project management." />
+  <style>
+    :root {
+      --bg: #0f1020;
+      --panel: #15162b;
+      --ink: #e9eaf6;
+      --muted: #b9bbd4;
+      --accent: #8260ff; /* indigo */
+      --accent-2: #e454ff; /* magenta */
+      --accent-3: #27d6a0; /* teal */
+      --card: #161735;
+      --border: #2a2c56;
+      --shadow: 0 10px 30px rgba(0,0,0,.35), 0 2px 10px rgba(0,0,0,.2);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: radial-gradient(1200px 600px at 80% -20%, rgba(130,96,255,.25), transparent), var(--bg); color: var(--ink); font: 16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1200px, 92vw); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 40; backdrop-filter: saturate(180%) blur(10px); background: rgba(15,16,32,.65); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
+    .brand svg { width: 38px; height: 38px; filter: drop-shadow(0 6px 18px rgba(130,96,255, .45)); }
+    .brand small { display: block; color: var(--muted); font-weight: 500; letter-spacing: .35px; margin-top: -2px; }
+    .navlinks a { margin-left: 18px; font-weight: 600; color: var(--muted); }
+    .navlinks a:hover { color: var(--ink); }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; border: 0; border-radius: 14px; font-weight: 700; box-shadow: var(--shadow); cursor: pointer; }
+    .btn.ghost { background: transparent; border: 1px solid var(--border); color: var(--ink); box-shadow: none; }
+    .btn:hover { transform: translateY(-1px); }
+
+    .hero { padding: 72px 0 32px; display: grid; grid-template-columns: 1.25fr 1fr; gap: 32px; align-items: center; }
+    .hero h1 { font-size: clamp(32px, 4vw, 54px); line-height: 1.12; margin: 0 0 14px; }
+    .hero p { color: var(--muted); font-size: 18px; margin: 0 0 22px; }
+    .hero .cta { display: flex; gap: 14px; flex-wrap: wrap; }
+    .glass { background: radial-gradient(1200px 600px at -10% -10%, rgba(39,214,160,.12), transparent), linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); }
+    .hero-card { padding: 20px; }
+
+    .tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .tag { background: #1b1d3f; color: #cdd1ff; border: 1px solid var(--border); padding: 6px 10px; border-radius: 999px; font-size: 13px; font-weight: 700; letter-spacing: .2px; }
+
+    .section { padding: 64px 0; }
+    .section h2 { margin: 0 0 14px; font-size: 30px; }
+    .muted { color: var(--muted); }
+
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border: 1px solid var(--border); border-radius: 18px; padding: 20px; box-shadow: var(--shadow); }
+    .card h3 { margin: 0 0 8px; font-size: 20px; }
+    .card p { margin: 0 0 12px; color: var(--muted); }
+    .card ul { margin: 0; padding-left: 18px; color: var(--muted); }
+
+    .process { counter-reset: step; display: grid; grid-template-columns: repeat(7, minmax(0,1fr)); gap: 12px; }
+    .process .step { position: relative; padding: 18px; border-radius: 16px; background: #1b1d3f; border: 1px solid var(--border); }
+    .process .step::before { counter-increment: step; content: counter(step); position: absolute; top: 10px; right: 12px; font-weight: 900; color: #9aa0ff; opacity: .4; }
+
+    .tools { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+    .pill { padding: 10px 12px; border: 1px dashed var(--border); border-radius: 999px; text-align: center; font-weight: 700; color: #dedeff; background: #14153a; }
+
+    .footer { border-top: 1px solid var(--border); padding: 28px 0 64px; color: var(--muted); font-size: 14px; }
+
+    @media (max-width: 1000px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+      .process { grid-template-columns: 1fr 1fr; }
+      .tools { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .grid { grid-template-columns: 1fr; }
+      .tools { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#top" class="brand" aria-label="Global Bridge Tech home">
+          <!-- Inline SVG logo -->
+          <svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bridgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="32" fill="url(#logoGradient)" opacity="0.1"/>
+  
+  <!-- Bridge structure -->
+  <!-- Left pillar -->
+  <rect x="20" y="25" width="4" height="30" fill="url(#logoGradient)" rx="2"/>
+  <!-- Right pillar -->
+  <rect x="56" y="25" width="4" height="30" fill="url(#logoGradient)" rx="2"/>
+  
+  <!-- Bridge deck -->
+  <rect x="18" y="35" width="44" height="3" fill="url(#bridgeGradient)" rx="1.5"/>
+  
+  <!-- Bridge cables -->
+  <path d="M 22 25 Q 40 30 58 25" fill="none" stroke="url(#logoGradient)" stroke-width="1.5"/>
+  <path d="M 22 27 Q 40 32 58 27" fill="none" stroke="url(#logoGradient)" stroke-width="1"/>
+  
+  <!-- Global connection points -->
+  <circle cx="15" cy="40" r="3" fill="url(#bridgeGradient)"/>
+  <circle cx="40" cy="20" r="2.5" fill="url(#bridgeGradient)"/>
+  <circle cx="65" cy="40" r="3" fill="url(#bridgeGradient)"/>
+  <circle cx="40" cy="60" r="2.5" fill="url(#bridgeGradient)"/>
+  
+  <!-- Connection lines -->
+  <path d="M 18 40 L 37.5 22" stroke="url(#logoGradient)" stroke-width="1" opacity="0.6"/>
+  <path d="M 62 40 L 42.5 22" stroke="url(#logoGradient)" stroke-width="1" opacity="0.6"/>
+  <path d="M 18 40 L 37.5 58" stroke="url(#logoGradient)" stroke-width="1" opacity="0.6"/>
+  <path d="M 62 40 L 42.5 58" stroke="url(#logoGradient)" stroke-width="1" opacity="0.6"/>
+  
+  <!-- Company name -->
+  <text x="85" y="26" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="url(#textGradient)">Global Bridge</text>
+  <text x="85" y="46" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="url(#bridgeGradient)">Tech</text>
+  
+  <!-- Tagline -->
+  <text x="85" y="62" font-family="Arial, sans-serif" font-size="9" font-weight="normal" fill="#6b7280" letter-spacing="1px">CONNECTING WORLDS THROUGH LOCALIZATION</text>
+</svg>
+          <div>
+            Global Bridge Tech
+            <small>CONNECTING WORLDS THROUGH LOCALIZATION</small>
+          </div>
+        </a>
+        <div class="navlinks">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#tools">Tools</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <div>
+        <h1>Ship multilingual products faster—with zero guesswork.</h1>
+        <p>
+          We help product, content, and learning teams automate their localization pipeline—
+          from TMS setup and API integrations to DTP and e‑Learning builds—so you launch
+          on time, in every market.
+        </p>
+        <div class="cta">
+          <a href="#contact" class="btn">Get a proposal</a>
+          <a href="#services" class="btn ghost">Explore services</a>
+        </div>
+        <div class="tags">
+          <span class="tag">memoQ & Phrase experts</span>
+          <span class="tag">Storyline & Rise 360</span>
+          <span class="tag">Adobe CC · Office · Figma</span>
+          <span class="tag">Linguistic QA & Testing</span>
+        </div>
+      </div>
+      <div class="glass hero-card">
+        <h3 style="margin:6px 0 8px">What makes us different</h3>
+        <ul class="muted" style="padding-left:18px; margin:0 0 12px">
+          <li><b>Integration‑first</b>: direct TMS ↔︎ client system hookups to remove manual steps.</li>
+          <li><b>Parser rules that protect</b> placeholders/variables from translators and MT.</li>
+          <li><b>Pre‑processing</b> that fixes files <i>before</i> they hit your TMS.</li>
+          <li><b>Pixel‑perfect DTP</b> across Adobe CC, Office, Google, Figma, Canva.</li>
+          <li><b>e‑Learning builds</b> with subtitles & voice‑over sync for Storyline/Rise.</li>
+          <li><b>LQA workflows</b> with test plans, scripts, and managed bug trackers.</li>
+        </ul>
+        <small class="muted">Based in Thailand · Serving APAC & global teams</small>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <p class="muted">Pick a full pipeline or specific components. We slot into your way of working.</p>
+      <div class="grid" style="margin-top:18px">
+        <div class="card">
+          <h3>TMS Setup & Integration</h3>
+          <p>Design, configure, and secure your translation engine.</p>
+          <ul>
+            <li>memoQ & Phrase configuration, workflows, roles, SSO.</li>
+            <li>Parser rules to lock placeholders, variables, and non‑translatables.</li>
+            <li>TM/TBX/Glossary setup, maintenance & versioning.</li>
+            <li>API/webhook integrations with CMS, repositories, and ticketing.</li>
+            <li>Automation: pre‑/post‑processing, QA checks, and MT routing.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>File Pre‑processing</h3>
+          <p>Clean, normalize, and convert assets before import.</p>
+          <ul>
+            <li>Fix broken encoding, hidden text, corrupt styles, rogue fonts.</li>
+            <li>IDML/INDD, PDF to editable, Storyline packages (.story), Rise exports.</li>
+            <li>Structure markup for maximum leverage and consistent segmentation.</li>
+            <li>Automated checks: placeholder integrity, regex QA, non‑translatables.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Desktop Publishing (DTP)</h3>
+          <p>Publish‑ready files across design suites and office tools.</p>
+          <ul>
+            <li>Adobe Creative Cloud (InDesign, Illustrator, Photoshop, XD).</li>
+            <li>Microsoft Office, Google Workspace, Figma, Canva.</li>
+            <li>Style mirroring, typography for Asian/RTL scripts, layout QA.</li>
+            <li>Hi‑DPI assets, print and digital output, preflight & packaging.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>e‑Learning Localization</h3>
+          <p>Localized, accessible courses that look and sound right.</p>
+          <ul>
+            <li>Articulate Storyline & Rise 360 builds with mirrored design.</li>
+            <li>Captioning/subtitles (SRT/VTT) and voice‑over synchronization.</li>
+            <li>Interactions, quizzes, triggers; font & language support.</li>
+            <li>SCORM/xAPI packaging and LMS smoke testing.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Localization & Linguistic Testing</h3>
+          <p>Evidence‑based QA with clear pass/fail and defect trends.</p>
+          <ul>
+            <li>Test strategy, test plans, scripts (functional + linguistic).</li>
+            <li>Bug tracker setup (Jira/Azure/GitHub), triage & defect lifecycle.</li>
+            <li>Metrics: MQM, error categories, release readiness gates.</li>
+            <li>On‑device and responsive testing for apps & web.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Project Management (PMO)</h3>
+          <p>Predictable delivery with proactive communication.</p>
+          <ul>
+            <li>Scoping, estimates, schedules, and stakeholder updates.</li>
+            <li>Risk management, change control, and RAID logs.</li>
+            <li>Vendor/linguist management and performance dashboards.</li>
+            <li>SLAs, KPIs, and continuous improvement cycles.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <h2>How we work</h2>
+      <p class="muted">A proven framework from discovery to optimization.</p>
+      <div class="process" style="margin-top:18px">
+        <div class="step"><b>Discover</b><br/><span class="muted">Audit systems, content types, languages, KPIs.</span></div>
+        <div class="step"><b>Design</b><br/><span class="muted">Workflows, parser rules, quality gates, roles.</span></div>
+        <div class="step"><b>Implement</b><br/><span class="muted">TMS config, API hooks, automations, security.</span></div>
+        <div class="step"><b>Localize</b><br/><span class="muted">Translate with TM/MT, glossary enforcement.</span></div>
+        <div class="step"><b>Validate</b><br/><span class="muted">DTP checks, e‑Learning QA, LQA and bug triage.</span></div>
+        <div class="step"><b>Launch</b><br/><span class="muted">Publish, package, and handover with docs.</span></div>
+        <div class="step"><b>Optimize</b><br/><span class="muted">Metrics, cost/time savings, A/B improvements.</span></div>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <h2>Tools & Tech</h2>
+      <p class="muted">We work with your stack, not against it.</p>
+      <div class="tools" style="margin-top:14px">
+        <div class="pill">memoQ</div>
+        <div class="pill">Phrase</div>
+        <div class="pill">Articulate Storyline</div>
+        <div class="pill">Articulate Rise 360</div>
+        <div class="pill">Adobe Creative Cloud</div>
+        <div class="pill">Microsoft Office</div>
+        <div class="pill">Google Workspace</div>
+        <div class="pill">Figma</div>
+        <div class="pill">Canva</div>
+        <div class="pill">Jira</div>
+        <div class="pill">GitHub / GitLab</div>
+        <div class="pill">Azure DevOps</div>
+        <div class="pill">WordPress / Contentful</div>
+        <div class="pill">REST APIs & Webhooks</div>
+        <div class="pill">Regex QA</div>
+        <div class="pill">SCORM / xAPI</div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p class="muted">Tell us about your content, languages, and timeline. We’ll reply within one business day.</p>
+      <div class="glass" style="padding: 18px; max-width: 720px;">
+        <form action="mailto:info@globalbridge-tech.com" method="post" enctype="text/plain">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <label> Name<br><input required type="text" name="name" placeholder="Jane Doe" style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); background:#0e1030; color:var(--ink)"></label>
+            <label> Email<br><input required type="email" name="email" placeholder="you@company.com" style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); background:#0e1030; color:var(--ink)"></label>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;">
+            <label> Company<br><input type="text" name="company" placeholder="Acme Inc." style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); background:#0e1030; color:var(--ink)"></label>
+            <label> Languages<br><input type="text" name="languages" placeholder="EN → TH, JP, KO" style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); background:#0e1030; color:var(--ink)"></label>
+          </div>
+          <label style="display:block; margin-top:12px;"> Project details<br>
+            <textarea name="details" rows="5" placeholder="Content type, volumes, tools, deadlines…" style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); background:#0e1030; color:var(--ink)"></textarea>
+          </label>
+          <div style="display:flex; gap:10px; margin-top:14px;">
+            <button class="btn" type="submit">Send inquiry</button>
+            <a class="btn ghost" href="#top">Back to top</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Global Bridge Tech — Thailand · APAC · Remote. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({behavior: 'smooth'}); }
+      });
+    });
+  </script>
+</body>
+</html>
